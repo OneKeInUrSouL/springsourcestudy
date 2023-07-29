@@ -1,5 +1,6 @@
-package com.example.springsourcestudy;
+package com.example.springsourcestudy.beandefinition;
 
+import com.example.springsourcestudy.pojo.User;
 import org.junit.jupiter.api.Test;
 import org.junit.platform.commons.logging.Logger;
 import org.junit.platform.commons.logging.LoggerFactory;
@@ -7,11 +8,21 @@ import org.springframework.beans.MutablePropertyValues;
 import org.springframework.beans.factory.support.*;
 import org.springframework.beans.factory.xml.XmlBeanDefinitionReader;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.context.annotation.AnnotatedBeanDefinitionReader;
+import org.springframework.context.annotation.ClassPathBeanDefinitionScanner;
+
+import java.util.Arrays;
 
 
+/**
+ * beanDefinition(获取bean类的元数据)
+ *
+ * @author OneKeInUrSouL
+ * @since 2023/07/29
+ */
 @SpringBootTest
-class SpringSourceStudyApplicationTests {
-    Logger logger = LoggerFactory.getLogger(SpringSourceStudyApplicationTests.class);
+class BeanDefinitionTests {
+    Logger logger = LoggerFactory.getLogger(BeanDefinitionTests.class);
 
     //BeanDefinition是Spring框架中定义Bean的配置元信息接口，它是Spring框架中定义Bean的配置元信息的接口，它是Spring框架中定义的最重要的接口之一。
     @Test
@@ -68,6 +79,9 @@ class SpringSourceStudyApplicationTests {
         System.out.println(registry.getBeanDefinition("dog"));
     }
 
+    /**
+     * bean的注入方式:1.读取xml的bean
+     */
     @Test
     public void testBeanDefinitionRegistryByXml() {
         //BeanDefinitionRegistry接口的实现类之一是XmlBeanDefinitionReader，它是从XML文件中读取BeanDefinition的类。
@@ -76,6 +90,31 @@ class SpringSourceStudyApplicationTests {
         XmlBeanDefinitionReader reader = new XmlBeanDefinitionReader(registry);
         reader.loadBeanDefinitions("classpath:bean.xml");
         System.out.println(registry.getBeanDefinition("dog").getBeanClassName());
+    }
+
+    /**
+     * 测试bean定义注册注释
+     */
+    @Test
+    public void testBeanDefinitionRegistryByAnnotation() {
+        //BeanDefinitionRegistry接口的另一个实现类是AnnotatedBeanDefinitionReader，它是从注解中读取BeanDefinition的类。
+        //AnnotatedBeanDefinitionReader类的register()方法用于从注解中读取BeanDefinition。
+        BeanDefinitionRegistry registry = new SimpleBeanDefinitionRegistry();
+        AnnotatedBeanDefinitionReader reader = new AnnotatedBeanDefinitionReader(registry);
+        reader.register(User.class);
+        System.out.println(Arrays.toString(registry.getBeanDefinitionNames()));
+    }
+
+    /**
+     * 测试bean定义:bean路径扫描
+     */
+    @Test
+    public void testBeanDefinitionRegistryByScanner(){
+        //ClassPathBeanDefinitionScanner类的register()方法用于从指定的包中读取BeanDefinition。
+        BeanDefinitionRegistry registry = new SimpleBeanDefinitionRegistry();
+        ClassPathBeanDefinitionScanner scanner = new ClassPathBeanDefinitionScanner(registry);
+        scanner.scan("com.example");
+        logger.info(() -> Arrays.toString(registry.getBeanDefinitionNames()));
     }
 
 }
