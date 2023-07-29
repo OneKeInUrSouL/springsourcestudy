@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- Definition for the Person bean -->
+    <bean id="dog" class="com.example.springsourcestudy.pojo.Dog">
+        <property name="name" value="John Doe"/>
+        <property name="color" value="白色"/>
+    </bean>
+
+</beans>
