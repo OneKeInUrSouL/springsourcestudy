@@ -1,4 +1,4 @@
-package com.example.springsourcestudy.内省api;
+package com.example.springsourcestudy.tool.内省api;
 
 import com.example.springsourcestudy.pojo.User;
 import org.apache.commons.beanutils.BeanUtils;

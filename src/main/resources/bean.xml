@@ -10,4 +10,9 @@
         <property name="color" value="白色"/>
     </bean>
 
+    <bean id="cat" class="com.example.springsourcestudy.pojo.User">
+        <property name="name" value="John Doe"/>
+        <property name="age" value="17"/>
+    </bean>
+
 </beans>
