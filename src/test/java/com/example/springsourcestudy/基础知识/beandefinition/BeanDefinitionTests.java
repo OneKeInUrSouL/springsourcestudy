@@ -1,4 +1,4 @@
-package com.example.springsourcestudy.beandefinition;
+package com.example.springsourcestudy.基础知识.beandefinition;
 
 import com.example.springsourcestudy.pojo.User;
 import org.junit.jupiter.api.Test;

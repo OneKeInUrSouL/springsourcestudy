@@ -1,4 +1,4 @@
-package com.example.springsourcestudy.tool.资源api;
+package com.example.springsourcestudy.基础知识.tool.资源api;
 
 import org.apache.commons.io.IOUtils;
 import org.junit.jupiter.api.Test;

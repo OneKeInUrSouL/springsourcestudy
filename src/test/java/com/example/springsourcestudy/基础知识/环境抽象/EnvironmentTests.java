@@ -1,4 +1,4 @@
-package com.example.springsourcestudy.环境抽象;
+package com.example.springsourcestudy.基础知识.环境抽象;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.context.ApplicationContext;

@@ -1,4 +1,4 @@
-package com.example.springsourcestudy.多波器;
+package com.example.springsourcestudy.基础知识.多波器;
 
 import com.example.springsourcestudy.listeners.EmailListener;
 import com.example.springsourcestudy.listeners.MessageListener;
