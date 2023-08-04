@@ -2,6 +2,7 @@ package com.example.springsourcestudy.基础知识.函数式接口;
 
 import com.example.springsourcestudy.functionInterface.MyMath;
 import com.example.springsourcestudy.service.Calculator;
+import com.example.springsourcestudy.service.StrategyOperation;
 import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;
@@ -44,7 +45,7 @@ public class FunctionInterfaceTests {
     }
 
     @Test
-    void addTest(){
+    void addTest() {
         MyMath add = (a, b) -> a + b;
         Calculator calculator = new Calculator();
         int calculate = calculator.Calculate(1, 2, add);
@@ -52,10 +53,19 @@ public class FunctionInterfaceTests {
     }
 
     @Test
-    void takeTest(){
+    void takeTest() {
         MyMath take = (a, b) -> a * b;
         Calculator calculator = new Calculator();
         int calculate = calculator.Calculate(1, 2, take);
         System.out.println(calculate);
+    }
+
+    @Test
+    void strategyTest() {
+        StrategyOperation strategyOperation = new StrategyOperation();
+        System.out.println(strategyOperation.strategy("add").operate(1, 2));
+        System.out.println(strategyOperation.strategy("sub").operate(4, 2));
+        System.out.println(strategyOperation.strategy("mul").operate(1, 2));
+        System.out.println(strategyOperation.strategy("div").operate(8, 2));
     }
 }
