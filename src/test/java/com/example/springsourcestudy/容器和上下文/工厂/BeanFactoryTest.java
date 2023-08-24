@@ -16,6 +16,9 @@ public class BeanFactoryTest {
     //    @Autowired
     UserService userService;
 
+    /**
+     * 测试分级bean工厂
+     */
     @Test
     void testHierarchicalBeanFactory() {
         //创建一个核心工厂
