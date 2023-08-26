@@ -6,6 +6,7 @@ import com.example.springsourcestudy.service.StrategyOperation;
 import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;
+import java.util.Comparator;
 import java.util.List;
 import java.util.function.Consumer;
 import java.util.function.Function;
@@ -67,5 +68,26 @@ public class FunctionInterfaceTests {
         System.out.println(strategyOperation.strategy("sub").operate(4, 2));
         System.out.println(strategyOperation.strategy("mul").operate(1, 2));
         System.out.println(strategyOperation.strategy("div").operate(8, 2));
+    }
+
+    @Test
+    void sortTest(){
+        String[] customers = {"2013UK0001", "2013US0001", "2011CN0001", "2012CN0001", "2014UA0001", "2014UA0002"};
+        Arrays.sort(customers, new Comparator<String>() {
+            @Override
+            public int compare(String o1, String o2) {
+                //2013UK0001、2013US0001、2011CN0001、2012CN0001、2014UA0001、2014UA0002
+                String c1CustomerId = o1.substring(0, 4);
+                String c2CustomerId = o2.substring(0, 4);
+                if (c1CustomerId.equals(c2CustomerId)) {
+                    return 0;
+                } else if (c1CustomerId.compareTo(c2CustomerId) > 0) {
+                    return 1;
+                } else {
+                    return -1;
+                }
+            }
+        });
+        System.out.println(Arrays.toString(customers));
     }
 }
