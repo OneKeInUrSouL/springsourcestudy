@@ -3,7 +3,7 @@ package com.example.springsourcestudy.基础知识.tool.Spring反射工具;
 import org.springframework.beans.factory.config.TypedStringValue;
 import org.springframework.core.convert.converter.Converter;
 
-public class stringToStringConver implements Converter<TypedStringValue, String> {
+public class stringToStringConverter implements Converter<TypedStringValue, String> {
     /**
      * Convert the source object of type {@code S} to target type {@code T}.
      *

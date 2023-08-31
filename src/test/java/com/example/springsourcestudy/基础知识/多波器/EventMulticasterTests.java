@@ -15,9 +15,9 @@ public class EventMulticasterTests {
     public void testSimpleApplicationEventMulticaster() {
         SimpleApplicationEventMulticaster simpleApplicationEventMulticaster = new SimpleApplicationEventMulticaster();
         simpleApplicationEventMulticaster.setTaskExecutor(Executors.newFixedThreadPool(10));
+        //添加监听器
         simpleApplicationEventMulticaster.addApplicationListener(new EmailListener());
         simpleApplicationEventMulticaster.addApplicationListener(new MessageListener());
-
         //使用多波器发布事件
         simpleApplicationEventMulticaster.multicastEvent(new OrderEvent(this, "订单创建"));
     }

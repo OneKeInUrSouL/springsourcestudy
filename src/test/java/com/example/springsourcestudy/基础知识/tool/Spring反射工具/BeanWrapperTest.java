@@ -57,7 +57,7 @@ public class BeanWrapperTest {
             //1.1 通过自定义的类型转换器进行类型转换
             DefaultConversionService conversionService = new DefaultConversionService();
             conversionService.addConverter(new StringToIntegerConverter());
-            conversionService.addConverter(new stringToStringConver());
+            conversionService.addConverter(new stringToStringConverter());
             //1.2 使用beanWrapper进行实例化
             BeanWrapper beanWrapper = new BeanWrapperImpl(Class.forName(beanDefinition.getBeanClassName()));
             beanWrapper.setConversionService(conversionService);

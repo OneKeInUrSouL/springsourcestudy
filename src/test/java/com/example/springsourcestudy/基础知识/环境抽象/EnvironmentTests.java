@@ -12,6 +12,8 @@ import java.util.Properties;
 public class EnvironmentTests {
     //profile是一个给定名字的逻辑分组的beanDefinition集合，只有处于激活状态的profile中的beanDefinition才会被注册到IoC容器中。
     //properties在几乎所有的情况下都是以键值对的形式存在的，它们可以通过Environment对象来访问。他的来源有多种，包括操作系统环境变量、JVM系统属性、JNDI、servlet上下文参数、属性文件、Map对象等。
+
+    //Environment是一个接口，它的实现类有两个，一个是StandardEnvironment，一个是StandardServletEnvironment.
     @Test
     public void testMoreEnvProperties(){
         ApplicationContext applicationContext = new GenericApplicationContext();

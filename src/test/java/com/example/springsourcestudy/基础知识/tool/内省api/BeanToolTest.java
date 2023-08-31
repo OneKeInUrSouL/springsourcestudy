@@ -21,7 +21,7 @@ public class BeanToolTest {
     // 类内省是指对一个类进行分析，了解其属性、方法、事件等的API，这些API都封装在java.beans.Introspector类中。
     // BeanInfo是对一个或多个属性、事件、方法的描述，这些描述信息都封装在java.beans.BeanInfo类中。
 
-    //Javabean是一种特殊的类，它主要用于传递数据信息，这种类中的属性必须私有，通过getter/setter方法来访问，这种类中不包含业务逻辑。
+    //Javabean是一种特殊的类，它主要用于传递数据信息，这种类中的属性必须私有，通过getter/setter方法来访问，这种类中不包含业务逻辑,例如pojo类就是标准的Javabean
 
     /**
      * 内省api测试 获取bean类的元数据
