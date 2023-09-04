@@ -1,6 +1,6 @@
 package com.example.springsourcestudy.基础知识.beandefinition;
 
-import com.example.springsourcestudy.pojo.User;
+import com.example.springsourcestudy.javaBean.User;
 import org.junit.jupiter.api.Test;
 import org.junit.platform.commons.logging.Logger;
 import org.junit.platform.commons.logging.LoggerFactory;

@@ -1,6 +1,6 @@
 package com.example.springsourcestudy.容器和上下文.工厂;
 
-import com.example.springsourcestudy.pojo.UserFactoryBean;
+import com.example.springsourcestudy.javaBean.UserFactoryBean;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.BeanFactory;
 import org.springframework.beans.factory.annotation.Autowired;

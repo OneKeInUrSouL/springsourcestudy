@@ -1,7 +1,7 @@
 package com.example.springsourcestudy.容器和上下文.工厂;
 
 import com.example.springsourcestudy.ApplicationAware.MyApplicationAwareBean;
-import com.example.springsourcestudy.pojo.User;
+import com.example.springsourcestudy.javaBean.User;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.context.metrics.buffering.BufferingApplicationStartup;
 import org.springframework.boot.test.context.SpringBootTest;

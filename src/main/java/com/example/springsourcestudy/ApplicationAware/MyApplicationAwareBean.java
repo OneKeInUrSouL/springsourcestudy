@@ -1,6 +1,6 @@
 package com.example.springsourcestudy.ApplicationAware;
 
-import com.example.springsourcestudy.pojo.User;
+import com.example.springsourcestudy.javaBean.User;
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.BeanInitializationException;
 import org.springframework.beans.factory.InitializingBean;

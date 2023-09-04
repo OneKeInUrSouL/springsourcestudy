@@ -1,4 +1,4 @@
-package com.example.springsourcestudy.pojo;
+package com.example.springsourcestudy.javaBean;
 
 import org.springframework.beans.factory.FactoryBean;
 import org.springframework.stereotype.Component;

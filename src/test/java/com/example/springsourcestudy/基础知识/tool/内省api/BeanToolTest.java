@@ -1,6 +1,6 @@
 package com.example.springsourcestudy.基础知识.tool.内省api;
 
-import com.example.springsourcestudy.pojo.User;
+import com.example.springsourcestudy.javaBean.User;
 import org.apache.commons.beanutils.BeanUtils;
 import org.junit.jupiter.api.Test;
 import org.slf4j.Logger;

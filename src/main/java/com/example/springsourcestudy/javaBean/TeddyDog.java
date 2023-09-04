@@ -1,4 +1,4 @@
-package com.example.springsourcestudy.pojo;
+package com.example.springsourcestudy.javaBean;
 
 import lombok.Data;
 import lombok.EqualsAndHashCode;

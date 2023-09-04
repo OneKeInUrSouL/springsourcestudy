@@ -1,7 +1,7 @@
 package com.example.springsourcestudy.容器和上下文.工厂;
 
-import com.example.springsourcestudy.pojo.User;
-import com.example.springsourcestudy.pojo.UserService;
+import com.example.springsourcestudy.javaBean.User;
+import com.example.springsourcestudy.javaBean.UserService;
 import org.junit.jupiter.api.Test;
 import org.junit.platform.commons.logging.Logger;
 import org.junit.platform.commons.logging.LoggerFactory;
